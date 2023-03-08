@@ -1,7 +1,7 @@
 # Wordle-TDD
 
 ## Software Design (COSC 6353 -- Spring 2023)
-## Dr. Venkat Subramaniam
+### Dr. Venkat Subramaniam
 
 To run: 
 1. Set up a Python virtual environment.
