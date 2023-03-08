@@ -5,7 +5,10 @@
 
 To run: 
 1. Set up a Python virtual environment.
-2. Activate the venv. For Mac, run the command "source venv/bin/activate".
+2. Activate the venv.
+	1. For Mac, run the command "source venv/bin/activate".
+	2. For Windows, run the command "venv\Scripts\activate.bat" or ".\venv\Scripts\activate".
+	3. To deactivate, run the command "deactivate" (for both Mac and Windows).
 3. Run the command "pip3 install -r /path/to/requirements.txt".
 4. 	1. To run all the unit tests, use the command "paver".
 	2. To run the ui (or play the game), use the command "paver ui".
