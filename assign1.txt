@@ -1,0 +1,62 @@
+Assign1: Due 11:59PM CT February 24
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+Using Test First Development (no code without test first) let's implement the problem designed in hw2. Feel free to evolve that design and use judgment to make changes based on the improved understanding and learning. You are not required to use any of the design idea or languages you mentioned in hw2, apply decisions based on your renewed learnings.
+
+Please take small steps and ask for frequent reviews.
+
+First start with a tests list (tests.txt) and a canary test. Implement at most two more tests and minimum code to make those tests to pass. This is a great first step to complete and ask for a review.
+
+After completing the assignment (and only after) let's answer the following questions:
+
+1. What did you learn mainly in this assignment?
+
+We developed this program using the Test Driven Development (TDD) process. We learned how TDD works and how to write good and effective unit tests. The code we ended up writing, we both agree, was likely less than we would have had we not used TDD.
+
+In our initial design in HW2, we had several methods for WordleGame(wordle.py). But as we developed the problem with the TDD approach by starting with minimum and relevant code, we were able to significantly reduce the number of methods.
+
+We started off with the Imperative Style of Programming and we wrote test cases to cover the implementation. But later we changed to the Functional Style of Programming. During this refactoring we had made some logical mistakes and as a result some test cases failed. Automated testing helped us get an early feedback on our mistakes and also about what cases we needed to fix.
+
+Since neither of us had any experience with Functional Style of Programming, this assignment was a great learning experience for the same. Our program had been designed using OOP in HW2. It was not easy to imagine how we would be writing code in FP, however, now we see that our program could have been designed in FP right from the beginning.
+
+Radon was used to check for the complexity of code. We got a couple builds that failed because of Radon due to complex code, so that made us mindful of how we were writing, especially things such as list comprehensions in Python. In order to reduce the complexity we split functions, so as to have only a single level of abstraction in them.
+
+With pair programming, our code went through four eyes before it was submitted for review. We pointed out some improvements and identified and corrected mistakes. We helped each other when one was stuck in a problem. 
+
+Other than the technical details, we also learned about one another and our manner of thinking and style of programming.
+
+2. How is the current design different, if at all, from the strategic design created in hw2?
+
+Our initial design had classes for GUI, WordleGame, GuessedResults, and two enums, GameStatus and Color. GuessedResults would have the guessed word and results. WordleGame had attributes like list of guessed results, target word and game status. The GUI class had input, button and game.
+
+In our current design we don’t have GuessedResults. Instead we return the results of the guess and number of attempts back to GUI from WordleGame. The GUI shows the results in appropriate color. So the need for a GuessedResult object was eliminated.
+
+We followed functional style programming, so we did not have any classes; instead attributes were passed around to functions.
+
+We used Match enum instead of Color enum, because it was more relevant and meaningful for the context of the world game. Color was to be a GUI feature. Match held the evaluated results of the guessed word.
+
+The GameStatus enum was there in our original design, which still exists in current design too.
+
+3. Were there any surprises or things you did not expect along the way? Any particular problem faced, things you had to tackle that you did not expect beforehand?
+
+We faced some difficulty in writing functional style of programming because this was the first time both of us were writing in this style. We were not sure how to implement logic for finding whether a letter is present without mutating the parameter variable.
+
+We initially found it hard to write relevant code to pass the tests. We spent a lot of time and had to go through multiple reviews to finalize what should be returned from the tally method.
+
+Since we did not have prior experience with functional style of programming, we were curious how the program would end up looking. By the end, we were surprised at how simple and straightforward the program ended up being because of both, functional style of programming and TDD.
+
+Total[100]: 100
+Program pops up the GUI when run[10]:
+Able to play the game[10]:
+All tests pass[10]:
+Test quality[20]:
+Code coverage[10]:
+Quality of design of core logic for tally[10]:
+Quality of design of the play rules[10]:
+Code quality[10]:
+Response to questions[10]:
+
+Please see https://www2.cs.uh.edu/~svenkat/spring2023sd/scores.pdf
+
